@@ -1,0 +1,49 @@
+<app-header></app-header>
+
+<span id="backbutton">
+  <img id="backimage" src="arrow-left-svgrepo-com.svg" [routerLink]="''" alt="back">
+</span>
+<div class="CartContainerRoot">
+  <div id="EmptyCartContainer" *ngIf="cartItems?.length === 0">
+    <div class="emptycart">
+      <img src="emptycart.svg" alt="cart">
+      <h3>Oops! Your cart is empty</h3>
+    </div>
+    <button [routerLink]="['']" class="ExploreProductsButton">Shop Now</button>
+  </div>
+  
+  <div *ngIf="cartItems.length > 0">
+    <div class="CartItemsContainer">
+        <div class="CartProducts" *ngFor="let item of cartItems">
+            <div class="checkboxcontainer">
+                <!-- <input type="checkbox" (change)="toggleSelection(item.id)" /> -->
+                <label class="checkbox-btn">
+                  <label for="checkbox"></label>
+                  <input id="checkbox" type="checkbox" (click)="toggleSelection(item.id)">
+                  <span class="checkmark"></span>
+              </label>
+            </div>
+
+                <div class="ProductDetail">
+                    <span id="productname">{{ item?.name }}</span>
+                </div>
+
+                <div class="SecondaryContainer">
+                    <div class="ButtonContainer">
+                        <button class="decrease" (click)="decreaseQuantity(item.id)">-</button>
+                         <span id="productname">{{ item?.quantity }}</span>
+                        <button class="increase" (click)="increaseQuantity(item.id)">+</button>
+                    </div>
+                    <div class="PriceContainer">
+                      <!-- <h3 class="PriceEach">{{ item?.price }}</h3> -->
+                      <h3 class="PriceEach">₹{{ item?.total }}</h3>
+                    </div>
+                </div>
+                <button class="removeButton" (click)="removeItem(item.id)">Remove</button>
+        </div>
+        <div class="BuyWithTotalPriceContainer">
+            <h3>Total Price: ₹{{ gettotalPrice() }}</h3>
+            <button class="buy-now" (click)="BuyNow()">Buy Now</button>
+        </div>
+        
+    </div>

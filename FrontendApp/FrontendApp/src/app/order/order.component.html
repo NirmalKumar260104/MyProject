@@ -1,0 +1,57 @@
+<app-header></app-header>
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card shadow-sm p-4 rounded" style="width: 38rem;">
+    <h2 class="text-center text-dark mb-3">Order Summary</h2>
+
+    
+    <div class="mb-3">
+      <label for="address" class="form-label fw-semibold">Delivery Address:</label>
+      <input id="address" type="text" [(ngModel)]="address" class="form-control border border-secondary" placeholder="Enter your address"/>
+      <small class="text-danger" *ngIf="errorMessages.address">{{ errorMessages.address }}</small>
+    </div>
+
+    <div class="mb-3">
+      <label for="pincode" class="form-label fw-semibold">Pincode:</label>
+      <input id="pincode" type="text" [(ngModel)]="pincode" class="form-control border border-secondary" placeholder="Enter pincode"/>
+      <small class="text-danger" *ngIf="errorMessages.pincode">{{ errorMessages.pincode }}</small>
+    </div>
+
+    <hr class="my-3"/>
+
+    
+    <h5 class="text-dark fw-semibold text-center">Items Ordered</h5>
+    <table class="table table-striped text-center">
+      <thead class="table-secondary">
+        <tr>
+          <th>Product Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of orderData.selectedItems">
+          <td class="fw-semibold">{{ item.name }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>${{ item.price }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h5 class="text-danger fw-bold text-center mt-3">Total Amount: ${{ orderData.totalPrice }}</h5>
+
+    <hr class="my-3"/>
+
+    
+    <h5 class="text-dark fw-semibold">Select Payment Method:</h5>
+    <select [(ngModel)]="paymentMethod" class="form-select border border-secondary">
+      <option value="">-- Select Payment Method --</option>
+      <option value="Credit Card">Credit Card</option>
+      <option value="Debit Card">Debit Card</option>
+      <option value="Cash on Delivery">Cash on Delivery</option>
+    </select>
+    <small class="text-danger" *ngIf="errorMessages.paymentMethod">{{ errorMessages.paymentMethod }}</small>
+
+    <button class="btn btn-dark mt-4 w-100 fw-semibold py-2" (click)="placeOrder()">Confirm Order</button>
+  </div>
+</div>

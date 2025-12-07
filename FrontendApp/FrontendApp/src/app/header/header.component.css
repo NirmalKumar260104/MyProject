@@ -1,0 +1,108 @@
+header {
+    background-color: #212121; 
+    color: white;  
+    border-radius: 2px;
+    height: 80px;
+    padding-left: 20px;
+    position: relative;
+    /* padding: 10px 0px; */
+}
+.navbar{
+    position: absolute;
+    right:50px;
+    top: -3px;
+    bottom: 3px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 30px; */
+    flex-direction: row;
+
+}
+.navContainer{
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    gap: 30px;
+    height: 70px;
+    border-radius: 20px;
+
+    /* background-color: rgb(36, 63, 37); */
+    margin-left: 20px;
+
+}
+
+
+
+.LocationElement{
+  font-size: 18px;
+  font-weight: 500;
+  width:300px;
+  /* background-color: blueviolet; */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  
+  /* background-color: rgb(31, 225, 102); */
+}
+.Logo{
+  cursor: pointer;
+}
+.LogoText{
+  position: absolute;
+  top: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  font-weight: 800;
+  margin-left: 10px;
+  /* background-color: rgb(120, 173, 35); */
+}
+
+#WeSell{
+  position: absolute;
+  top: 52px;
+  left: 50px;
+  font-weight: 800;
+  color:aqua;
+  font-size: 16px;
+
+
+}
+.SearchInputBox{
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 300px;
+  border: none;
+  outline: none;
+  /* background-color: aqua; */
+}
+
+.SimpleButton{
+  border: none;
+  padding: 7px 30px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.ButtonContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.BtnColor1{
+  background-color: rgb(68, 181, 96);
+}
+
+.BtnColor2{
+  background-color: rgb(255, 172, 47);
+}
+.BtnColor3{
+  background-color: rgb(188, 120, 17);
+}

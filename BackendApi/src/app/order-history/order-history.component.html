@@ -1,0 +1,48 @@
+<app-header></app-header>
+ 
+<div class="RootProfileContainer">
+    <div class="SecondProfileContainer">
+        <div class="TopSidebarContainerForProfile">
+            <a [routerLink]="['/profile']">Profile</a>
+            <a [routerLink]="['/orderhistory']">Orders</a>
+        </div>
+ 
+        <div class="ContentSideContentContainer">
+            <h4 class="HeadingProfile">Order History</h4>
+ 
+            <div class="InsideContainer" *ngIf="orders.length > 0; else noOrders">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Order Date</th>
+                            <th>Delivery Address</th>
+                            <th>Payment Method</th>
+                            <th>Status</th>
+                            <th>Order Items</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let order of orders">
+                            <td>{{ order.orderDate | date:'medium' }}</td>
+                            <td>{{ order.address }}</td>
+                            <td>{{ order.paymentMethod }}</td>
+                            <td>{{ order.status }}</td>
+                            <td>
+                                <ul>
+                                    <li *ngFor="let item of order.orderItems">
+                                        {{item.productName}} (x{{ item.quantity }}) - ₹{{ item.price }}
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+ 
+            <ng-template #noOrders>
+                <p class="text-danger text-center">No orders found.</p>
+            </ng-template>
+        </div>
+    </div>
+</div>
+ 

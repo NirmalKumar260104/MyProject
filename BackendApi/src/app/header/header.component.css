@@ -1,0 +1,337 @@
+.HeaderContainerRoot{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background-color: #000000;
+  z-index:1000;
+}
+ 
+header {
+    background-color: rgb(40, 40, 40);
+    color: white;  
+    border-radius: 2px;
+    height: 80px;
+    padding-left: 20px;
+    position: relative;
+    /* padding: 10px 0px; */
+}
+.navbar{
+    position: absolute;
+    right:5px;
+    top: -3px;
+    bottom: 3px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 30px; */
+    flex-direction: row;
+ 
+}
+.navContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    gap: 10px;
+    height: 70px;
+    border-radius: 20px;
+    /* background-color: rgb(36, 63, 37); */
+    margin-left: 20px;
+}
+ 
+.LocationElement{
+  font-size: 18px;
+  font-weight: 500;
+  width:250px;
+  /* background-color: blueviolet; */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+ 
+ 
+  /* background-color: rgb(31, 225, 102); */
+}
+ 
+.refreshButton{
+  border: none;
+  background-color: transparent;
+  padding: 3px 3px;
+  transition: all 0.2s ease-in-out;
+  border-radius:20px;
+  cursor: pointer;
+}
+ 
+.refreshButton:hover{
+  transform: scale(0.95);
+}
+ 
+.refreshButton:active{
+  transform: scale(0.95);
+}
+ 
+.Logo{
+  cursor: pointer;
+}
+.LogoText{
+  position: absolute;
+  top: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  font-weight: 800;
+  margin-left: 10px;
+  /* background-color: rgb(120, 173, 35); */
+}
+ 
+#WeSell{
+  position: absolute;
+  top: 52px;
+  left: 50px;
+  font-weight: 800;
+  color:rgb(15, 203, 255);
+  font-size: 16px;
+ 
+ 
+}
+ 
+ 
+.SimpleButton{
+  border: none;
+  padding: 7px 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+ 
+.SimpleButton:hover{
+  transform: scale(0.97);
+  text-decoration:underline;
+}
+ 
+ 
+.ButtonContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+ 
+.BtnColor1{
+  background-color: transparent;
+  color: white;
+}
+ 
+.BtnColor2{
+  /* background-color: rgb(36, 36, 36); */
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+}
+.BtnColor3{
+  /* background-color: rgb(50, 50, 50); */
+  background-color: transparent;
+  color: white;
+  /* border: 1px solid grey; */
+}
+.BtnColor5{
+  background-color: transparent;
+  color: white;
+}
+ 
+ 
+ 
+.cartimagecontainer{
+  padding: 2px 2px;
+  border-radius: 8px;
+  font-size: 18px;
+  width:70px;
+  height: 40px;
+  /* background-color: rgb(253, 253, 253); */
+  transition: all 0.2s ease-in-out;
+}
+ 
+.cartimagecontainer:hover{
+  transform: scale(0.97);
+}
+ 
+.cartimagecontainer img{
+  width: 100%;
+  height: 100%;
+}
+ 
+/* search list  */
+ 
+ 
+ 
+.searchContainer{
+  width: 300px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  border: 1px solid #000000;
+}
+/* .searchContainer:has(.SearchInputBox:focus)
+{
+  border-radius: 10px 10px 0px 0px;
+ 
+} */
+ 
+.SearchInputBox{
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: rgb(255, 255, 255);
+}
+.SearchInputBox:focus{
+  /* border-radius: 10px 10px 0px 0px; */
+  background-color: rgb(255, 255, 255);
+}
+ 
+ 
+.SearchInputBox::selection{
+  border-radius: 10px;
+}
+ 
+.searchResultsList{
+  position: absolute;
+  width: 300px;
+  top: 38px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 0px 0px 10px 10px;
+  overflow: hidden;
+}
+ 
+.resultantproductspan{
+  padding: 10px 20px;
+  width: 100%;
+}
+ 
+.resultantproductspan:hover{
+  background-color: aliceblue;
+}
+ 
+.NoProductsFound{
+  padding: 10px 20px;
+  width: 100%;
+  position: absolute;
+  width: 300px;
+  top: 38px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 0px 0px 10px 10px;
+  overflow: hidden;
+}
+ 
+.burger{
+  display: none;
+}
+ 
+.menuBarContainer{
+  display:none;
+}
+ 
+@media (max-width:1016px) {
+  .navContainer .LocationElement{
+    display: none;
+  }
+}
+ 
+ 
+@media (max-width : 900px) {
+  .menuBarContainer{
+      background-color: rgb(39, 39, 39);
+      width: 30%;
+      position: fixed;
+      top: 80px;
+      bottom: 0px;
+      right: 0px;
+  }
+ 
+  .menuBarContainer span{
+    text-align: center;
+    /* border:1px solid grey; */
+    padding: 12px 0px;
+  }
+ 
+  .menuBarContainer span:nth-child(1){
+    margin-top: 30px;
+  }
+ 
+  .burger{
+    display: block;
+  }
+ 
+  .widthfull{
+    width:100%;
+  }
+  .ButtonContainer, .LocationElement{
+    display: none;
+  }
+}
+ 
+@media (max-width:500px){
+  .searchContainer{
+    width: 150px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    border: 1px solid #000000;
+  }
+ 
+  .searchResultsList{
+    position: absolute;
+    width: 150px;
+    top: 38px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    overflow: hidden;
+  }
+ 
+  .NoProductsFound{
+    padding: 10px 20px;
+    width: 150px;
+    position: absolute;
+    top: 38px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    overflow: hidden;
+  }
+}
+ 
+ 
+ 
+.sidebar-visible {
+  display: block;
+}
+ 
+.sidebar-hidden {
+  display: none;
+}
+
+@media (min-width: 901px) {
+  .menuBarContainer {
+    display: none !important;
+  }
+}
+ 

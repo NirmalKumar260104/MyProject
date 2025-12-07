@@ -1,0 +1,45 @@
+<div class="OverViewContainer">
+    <div class="SecondaryContainerOverview">
+        <div class="OverviewBox">
+            <span class="HeadingSpanContainer boldhead">Revenue</span>
+            <span class="ContentSpanBox display">
+                <p id="TotalRevenue"> ₹{{TotalRevenue | number:'1.2-2':'en-IN'}}</p>
+            </span>
+            <span class="ButtonSpanBox">
+                <p id="TodayRevenue"> Today : ₹{{todayrevenue | number:'1.2-2':'en-IN'}}</p>
+            </span>
+            <input type="date" (change)="fetchRevenueByDate($event)">
+            <p>Selected Date Revenue: ₹{{selectedDateRevenue | number:'1.2-2':'en-IN'}}</p>
+        </div>
+        
+        <div class="OverviewBox">
+            <span class="HeadingSpanContainer boldhead">Products</span>
+            <span class="ContentSpanBox greencolor">
+                <p id="TotalRevenue">
+                    {{totalProduct}}
+                </p></span>
+        </div>
+        <div class="OverviewBox">
+            <span class="HeadingSpanContainer">Categories</span>
+            <span class="ContentSpanBox greencolor">
+                <p id="TotalRevenue">
+                    {{totalCategories}}
+                </p></span>
+        </div>
+        <div class="OverviewBox">
+            <span class="HeadingSpanContainer">Total Users</span>
+            <span class="ContentSpanBox">
+                <p id="TotalRevenue">
+                    {{totalUsers}}
+                </p></span>
+        </div>
+         <div class="OverviewBox">
+            <span class="HeadingSpanContainer border_bottom">Orders</span>
+            <span class="ContentSpanBox display">
+                <p class="Pending colorB">Pending : {{OrderStatus.pending}}</p>
+                <p class="Delivered colorC">Delivered : {{OrderStatus.delivered}}</p>
+                <p class="Shipped colorA">Shipped : {{OrderStatus.shipped}}</p>
+            </span>
+        </div>
+    </div>
+</div>

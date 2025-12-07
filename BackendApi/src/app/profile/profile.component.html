@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="RootProfileContainer">
+  <div class="SecondProfileContainer">
+    <div class="TopSidebarContainerForProfile">
+      <a [routerLink]="['/profile']" id="Profiledetails">Profile</a>
+      <a [routerLink]="['/orderhistory']" id="Profiledetails">Orders History</a>
+    </div>
+    <div class="ContentSideContentContainer">
+        <h2 class="HeadingProfile">Profile Details</h2>
+        <div class="InsideContainer" *ngIf="userInfo; else noUser">
+            <img id="profileimage" src="user2.svg" alt="">
+            <div class="UserInfoContainer">
+                <p id="Name"><strong>Name :</strong> {{ userInfo.name }}</p>
+                <p id="Email"><strong>Email :</strong> {{ userInfo.email }}</p>
+                <p id="Address"><strong>Address :</strong> {{ userInfo.address }}</p>
+                <p id="Pincode"><strong>Pincode :</strong> {{ userInfo.pincode }}</p>
+                <p id="MobileNumber"><strong>Mobile Number :</strong> {{ userInfo.mobile }}</p>
+                <img id="editbuttonicon" (click)="navigateToEditPage()" src="edit.svg" alt="">
+            </div>
+        </div>
+        <ng-template #noUser>
+          <p class="text-danger">User details not available.</p>
+        </ng-template>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,81 @@
+.OrderConfirmContainer {
+    background-color: #ffffff;
+    height: 80vh;
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .OrderConfirmInner {
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+    border-radius: 12px;
+    height: 95%;
+    text-align: center;
+    width: 95%;
+    box-shadow: 0 5px 15px rgba(48, 48, 48, 0.2);
+  }
+  .checkmark {
+    font-size: 48px;
+    color: green;
+    margin: 10px 0;
+  }
+   
+  .OrderDetailsContainer {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(159, 159, 159, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+   
+  .section {
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+   
+  .row_total {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding:10px 0px;
+    border-top: 1px solid rgb(201, 201, 201);
+    font-weight: bold;
+  }
+   
+  .continue-btn {
+    padding: 0.5rem 1rem;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+   
+  .continue-btn:hover {
+    background-color: #444;
+  }
+  .cancel{
+    top: 1px;
+    right: 1px;
+    position: absolute;
+   
+  }
+h3{
+  border-bottom: 1px solid rgb(201, 201, 201);
+  padding:10px 0px;
+}
+  
+  #backbutton{
+    width:50px;
+    height:50px;
+    position:absolute;
+    top:120px;
+    left:30px;
+  }
+  
+  #backimage{
+    width: 100%;
+    height:100%;
+  }

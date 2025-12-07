@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div id="MasterContainer" style="padding:20px 50px; margin-top: 80px;">
+
+  <div class="product_container">
+    <div *ngFor="let product of SpecificProducts" class="product_card">
+        <div class="image_container" [routerLink]="'/product/' + product.id">
+            <img [src]="'http://localhost:5156' + product.imageUrl" alt="Product Image">
+            <!-- <img [src]="product.imageUrl == 'https://example.com/example.jpg' ?  'apple.svg' : 'http://localhost:5156' + product.imageUrl" alt="categ.name"> -->
+        </div>
+        
+        <div class="products_details_box" >
+          <div class="product_details" [routerLink]="'product/' + product.id">
+            <h3 id="name">{{ product.name }}</h3>
+            <p id="brand">{{ product.brand }}</p>
+            <p id="price">{{ product.price | currency:'INR' }}</p>
+          </div>
+          <button class="AddTocartButton" (click)="addToCart(product.id)"> Add</button>
+        </div>
+    </div>
+  </div>
+</div>

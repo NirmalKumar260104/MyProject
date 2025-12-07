@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+ 
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: rgb(187, 245, 169);
+}
+ 
+.emptycart {
+    text-align: center;
+    margin-top: 50px;
+}
+ 
+.emptycart h3 {
+    color: rgb(194, 25, 34);
+}
+ 
+.total-price-container,
+.buy-now-container {
+    text-align: right;
+    margin-top: 20px;
+    padding-right: 50px;
+}
+ 
+.buy-now {
+    background-color: green;
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+ 
+.buy-now:hover {
+    background-color: rgb(6, 60, 6);
+}
+ 
+.decrease, .increase, .remove {
+    background-color: #ccc;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+/* .decrease{
+    color: ;
+} */
+ 
+.increase:hover{
+    background-color: #566c41;
+}
+.decrease:hover{
+    background-color: #883c3c;
+}
+ 
+.remove {
+    background-color: rgb(209, 37, 37);
+    color: white;
+}
+ 
+.remove:hover {
+    background-color: darkred;
+}
+ 
+img{
+    height: 150px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+#backbutton{
+    width:40px;
+    height:40px;
+    position:absolute;
+    top: 100px;
+    left:20px;
+}
+#backimage{
+    width: 100%;
+    height:100%;
+}

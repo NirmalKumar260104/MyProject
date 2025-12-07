@@ -1,0 +1,29 @@
+<app-header></app-header>
+<span id="backbutton">
+  <img id="backimage" src="arrow-left-svgrepo-com.svg" [routerLink]="['']" alt="back">
+</span>
+<div class="OrderConfirmContainer">
+    <div class="OrderConfirmInner">
+        <div class="OrderConfirmdetails">
+            <!-- <button class="cancel" (click)="gotoHome()">X</button></div> -->
+            <h2>Order Confirmed</h2>
+            <span class="checkmark"><img src="tickicon.svg" width="80px" height="80px"  alt=""></span>
+            <p>Thank you for purchasing! Your order has been placed.</p>
+        </div>
+      <div class="OrderDetailsContainer">
+        <div class="section">
+            <h3><strong>Order Summary</strong></h3>
+            <div class="row">
+            <span><strong> Delivery Address :</strong> {{ orderData.address }}</span>
+            <span><strong> Pincode : </strong> {{ orderData.pincode }}</span>
+            <span><strong>Payment Method : </strong> {{ orderData.paymentMethod }}</span>
+            <span><strong>Tax : ₹</strong>{{ " 00.00" }}</span>
+        </div>
+          <span class="row_total">
+              <span>Total</span><span>₹{{ orderData.totalPrice }}</span>
+          </span>
+        </div>
+   
+        <button class="continue-btn" (click)="gotoHome()">Continue Shopping</button>
+      </div>
+    </div>

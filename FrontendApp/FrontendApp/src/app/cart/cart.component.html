@@ -1,0 +1,97 @@
+<app-header></app-header>
+<body>
+  <span id="backbutton">
+    <img id="backimage" src="arrow-left-svgrepo-com.svg" [routerLink]="'profile/'" alt="back">
+</span>
+<ng-container *ngIf="cartItems?.length === 0">
+  <div class="emptycart">
+    <img src="EmptyCart.png" alt="cart">
+    <h3>Oops! Your cart is empty</h3>
+  </div>
+</ng-container>
+ 
+<ng-container *ngIf="cartItems.length > 0">
+  <table class="cart-table">
+    <thead>
+      <tr>
+        <th>Select</th>
+        <th>Product Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of cartItems">
+        <td>
+          <input type="checkbox" (change)="toggleSelection(item.id)" />
+        </td>
+        <td>{{ item?.name }}</td>
+        <td>
+          <button class="decrease" (click)="decreaseQuantity(item.id)">➖</button>
+          {{ item?.quantity }}
+          <button class="increase" (click)="increaseQuantity(item.id)">➕</button>
+        </td>
+        <td>{{ item?.price }}</td>
+        <td>{{ item?.total }}</td>
+        <td>
+          <button class="remove" (click)="removeItem(item.id)">Remove</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+ 
+  <div class="total-price-container">
+    <h3>Total Price: {{ gettotalPrice() }}</h3>
+  </div>
+  <div class="buy-now-container">
+    <button class="buy-now" (click)="BuyNow()">🛍 Buy Now</button>
+  </div>
+</ng-container>
+</body>
+ 
+ 
+
+
+
+
+<!-- <app-header></app-header>
+<div class="total-price-container">
+  <h3>Total Price : {{ gettotalPrice() }}</h3>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Select</th>
+      <th>Product Name</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Total</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of cartItems">
+      <td>
+        <input type="checkbox" (change)="toggleSelection(item.id)" />
+      </td>
+      <td>{{ item?.name }}</td>
+      <td>
+        <button class="btn btn-sm btn-secondary" (click)="decreaseQuantity(item.id)">➖</button>
+        {{ item?.quantity }}
+        <button class="btn btn-sm btn-primary" (click)="increaseQuantity(item.id)">➕</button>
+      </td>
+      <td>{{ item?.price }}</td>
+      <td>{{ item?.total }}</td>
+      <td>
+        <button class="btn btn-danger btn-sm" (click)="removeItem(item.id)"> Remove</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="buy-now-container text-center mt-4">
+  <button class="btn btn-success" (click)="BuyNow()">🛍 Buy Now</button>
+</div>
+
+<p *ngIf="cartItems?.length === 0" class="text-danger">Your cart is empty!</p> -->

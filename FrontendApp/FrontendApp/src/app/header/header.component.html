@@ -1,0 +1,19 @@
+<header class="header">
+    <div class="Logo" (click)="navigateToHome()">
+        <span class="LogoText" >Ubuy</span>
+        <h5 id="WeSell">WeSell</h5>
+    </div>
+    <nav class="navbar">
+        <div class="navContainer">
+            <span *ngIf="location" class="LocationElement">📌{{ location }}</span> 
+            <input type="text" class="SearchInputBox" placeholder="Search products..." />
+            <div class="ButtonContainer">
+                <button class="SimpleButton BtnColor1" (click)="navigateToCart()" >Cart</button>
+                <button *ngIf="!isLoggedIn" (click)="navigateToLogin()" class="SimpleButton BtnColor2">Login</button>
+                <button *ngIf="isLoggedIn" (click)="navigateToProfile()" class="SimpleButton BtnColor1">Profile</button>
+                <button *ngIf="isLoggedIn" (click)="logout()" class="SimpleButton BtnColor3">Logout</button>
+            </div>
+        </div> 
+    </nav>
+  </header>
+  

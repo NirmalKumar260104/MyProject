@@ -1,0 +1,162 @@
+.AddProductscontainer{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    padding: 20px 10px;
+    color:black;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+}
+
+.SubAddProductContainer{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 10px;
+    border-radius: 20px;
+    box-shadow:0 0 10px rgb(192, 192, 192);
+
+}
+.AddProductscontainer h2{
+    text-align: center;
+    color:black;
+
+}
+.AddProductscontainer form{
+    padding: 20px 20px;
+    height: 85%;
+    /* background-color: rgb(12, 229, 8); */
+}
+.CenterInputContainer{
+    /* background-color: rgb(235, 8, 8); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+
+.LeftSideInputContainer{
+    /* background-color: aquamarine; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 10px;
+}
+
+.RightSideInputContainer{
+    /* background-color: rgb(255, 127, 227); */
+    width: 50%;
+    padding: 10px 10px;
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.RightSideInputContainer textarea{
+    border-radius: 10px;
+    height: 48px;
+    text-overflow: scroll;
+    resize: none;
+    outline: none;
+    border: 1px solid rgb(196, 196, 196);
+    background-color: rgb(255, 255, 255);
+    box-shadow:0 0 5px rgb(228, 228, 228);
+    
+}
+
+.RightSideInputContainer textarea:focus, .LabelInputJoin input:focus{
+    border: 2px solid rgb(191, 196, 28);
+}
+
+
+
+.LabelInputJoin{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.LabelInputJoin input{
+    border-radius: 10px;
+    /* border: 1px soldi grey; */
+    border: 1px solid rgb(196, 196, 196);
+    outline: none;
+    padding: 10px 10px;
+    height: 47px;
+    background-color: rgb(255, 255, 255);
+    box-shadow:0 0 5px rgb(228, 228, 228);
+}
+.LabelInputJoin select{
+    height: 45px;
+    padding: 10px 0px;
+    font-size: 15px;
+    border-radius: 10px;
+    color: black;
+}
+
+.ImageAndSubmitContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.LabelImageJoin{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.LabelImageJoin .ImagefileUpload{
+    height: 30px;
+}
+
+.ImageAndSubmitContainer button{
+    width: 100%;
+    padding: 10px 0px;
+    border-radius: 10px;
+    background-color: yellow;
+}
+
+
+
+.ButtonContainerBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.ButtonContainerBox button{
+    background-color: rgb(241, 238, 64);
+    border-radius: 10px;
+    padding: 10px 10px;
+    width: 40%;
+    border: 1px solid rgb(233, 233, 233);
+    /* box-shadow: 0 0 3px rgb(66, 66, 66); */
+    /* border: none; */
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.2s ease-in-out;
+}
+
+.ButtonContainerBox button:hover{
+    background-color: rgb(255, 251, 1);
+    transform: scale(0.98);
+}
+
+.ButtonContainerBox button:nth-child(1){
+    background-color: rgb(176, 176, 176);
+}
+
+.ButtonContainerBox button:nth-child(1):hover{
+    background-color: rgb(195, 195, 195);
+}

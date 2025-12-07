@@ -1,0 +1,63 @@
+<app-header></app-header>
+ 
+<div class="OrderPageContainer">
+  <div class="OrderPageSecondaryContainer">
+    <h2 class="OrderTitle">Order Summary</h2>
+    <hr>
+   
+    <div class="AddressContainer">
+        <span class="AddressSpan">
+            <label for="address">Delivery Address:</label>
+            <input id="address" type="text" [(ngModel)]="address" placeholder="Enter your address"/>
+        </span>
+         
+        <span class="PincodeSpan">
+            <label for="pincode">Pincode:</label>
+            <input id="pincode" type="text" [(ngModel)]="pincode" placeholder="Enter pincode"/>
+        </span>
+        <div class="PaymentSelectContainer">
+          <h5>Select Payment Method:</h5>
+          <select [(ngModel)]="paymentMethod">
+              <option value="">-- Select Payment Method --</option>
+              <option value="Credit Card">Credit Card</option>
+              <option value="Debit Card">Debit Card</option>
+              <option value="Cash on Delivery">Cash on Delivery</option>
+          </select>
+        </div>
+    </div>
+ 
+    <hr>
+    <h5 class="BillDetailsTitle">Bill Details</h5>
+ 
+    <table class="ProductsFinalList">
+      <thead>
+          <tr>
+              <th>Product Name</th>
+              <th>Quantity</th>
+              <th>Price</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let item of orderData.selectedItems">
+              <td>{{ item.name }}</td>
+              <td>{{ item.quantity }}</td>
+              <td>₹{{ item.price }}</td>
+          </tr>
+      </tbody>
+      <tfoot>
+          <tr>
+              <td colspan="2">Total Amount:</td>
+              <td>₹{{ orderData.totalPrice }}</td>
+          </tr>
+      </tfoot>
+    </table>
+ 
+    <div class="BottomConfirmContainer">
+        <span class="TotalAmountFooter">
+            <p>Total Bill: ₹{{ orderData.totalPrice }}</p>
+        </span>
+        <button class="CancelButton" (click)="cancelandredirect()">Cancel</button>
+        <button class="ConfirmButton" (click)="placeOrder()">Confirm Order</button>
+    </div>
+  </div>
+</div>

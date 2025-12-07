@@ -1,0 +1,37 @@
+<div class="RootProductsContainer">
+    <div class="AddNewProductContainer">
+        <span id="totalplusrefresh">
+            <button class="RefreshProducts" (click)="GetAllCategories()"><img src="refresh.svg" id="refreshimage" alt=""></button>
+            <h2 id="totalproducts">Total Category : {{ AllCategories.length}} </h2>
+        </span>
+        <!-- <button id="AddProduct" [routerLink]="['/admin/addproduct']">Add product</button> -->
+        <button id="AddProduct" [routerLink]="['/admin/addcategory']">Add Category</button>
+    </div>
+   
+    <div class="AllProductsListContainer">
+        <div class="AllproductsSubContainer" *ngIf="AllCategories.length > 0; else noCategories">
+        <ul>
+        <li *ngFor="let cate of AllCategories" class="productitemlist">
+
+            <img [src]="'http://localhost:5156' + cate.imageUrl" alt="{{ cate.name }}">
+            <!-- <img [src]="cate.imageUrl == 'https://example.com/example.jpg' ?  'category.svg' : 'http://localhost:5156' + cate.imageUrl" alt="categ.name"> -->
+             
+            <div class="productDetailsDiv">
+                <h3 title="{{cate.description}}">{{ cate.name }}</h3>
+                <p>{{ cate.description }}</p>
+            </div>
+            <div class="ProductActionsContainer">
+                <button [routerLink]="['/admin/editcategory/' + cate.id]" class="ActionButton color1">Edit</button>
+                <!-- <button [routerLink]="['/admin/updatestock/' + product.id]" class="ActionButton color3">update stock</button> -->
+                <button (click)="deleteCategory(cate.id)" class="ActionButton color2">Delete</button>
+            </div>
+        </li>
+        </ul>
+        </div>
+        <ng-template #noCategories>
+            <p>No Category available.</p>
+        </ng-template>
+    </div>
+</div>
+
+

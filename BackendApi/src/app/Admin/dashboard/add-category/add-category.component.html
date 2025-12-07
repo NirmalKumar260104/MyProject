@@ -1,0 +1,35 @@
+<div class="AddProductscontainer">
+    <div class="SubAddProductContainer">
+        <h2>{{buttontitle}} Category</h2>
+        <hr>
+        <form action="" method="POST" enctype="multipart/form-data">
+            <div class="CenterInputContainer">
+                <div class="LeftSideInputContainer">
+                    <span class="LabelInputJoin">
+                        <label for="ProductName">Category Name:</label>
+                        <input type="text" id="ProductName" name="ProductName" [(ngModel)]="NewCategory.name" required>
+                    </span>
+                </div>
+                
+                <div class="RightSideInputContainer">
+                    
+                    <span class="LabelInputJoin">
+                        <label for="productdescription">Description:</label>
+                        <textarea id="productdescription" name="productdescription" [(ngModel)]="NewCategory.description"  required ></textarea>
+                    </span>
+                </div>
+            </div>
+            <div class="ImageAndSubmitContainer">
+                <span class="LabelImageJoin">
+                    <label for="ProductimageUrl">Upload Image:</label>
+                    <input type="file" id="ProductimageUrl" name="ProductimageUrl" (change)="onFileSelected($event)" class="ImagefileUpload" required>
+                </span>
+                
+                <span class="ButtonContainerBox">
+                    <button [routerLink]="['/admin/Categories/']">Cancel</button>
+                    <button type="submit" (click)="AddOrUpdateCategory()">{{buttontitle}} Category</button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>

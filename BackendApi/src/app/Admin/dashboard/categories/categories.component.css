@@ -1,0 +1,167 @@
+.RootProductsContainer {
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.AddNewProductContainer{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: black;
+    background-color: rgb(255, 255, 255);
+    /* border: 1px solid grey; */
+    border-radius: 10px;
+    
+}
+.AddNewProductContainer #AddProduct{
+    padding: 8px 10px;
+    border: none;
+    font-weight: 500;
+    border-radius: 8px;
+    background-color: rgb(29, 215, 153);
+}
+
+.AddNewProductContainer #AddProduct:hover{
+    background-color: rgb(21, 241, 168);
+}
+.AddNewProductContainer #AddProduct:active{
+    transform: scale(0.9);
+}
+
+#totalplusrefresh{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+.RefreshProducts{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ffffff;
+    transition: transform 0.5s ease-in-out;
+}
+
+.RefreshProducts:hover{
+    transform: scale(0.95);
+    background-color: rgb(228, 228, 228);
+}
+
+.RefreshProducts:active{
+    transform: scale(0.8);
+    background-color: rgb(229, 229, 229);
+}
+
+
+#refreshimage{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+.AllProductsListContainer{
+    width: 100%;
+    height: 85%;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* product list layout */
+
+.AllproductsSubContainer {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; /* Enables scrolling */
+  }
+  
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .productitemlist {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .productitemlist img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+  }
+  
+  .productDetailsDiv {
+    flex: 1;
+  }
+  
+  .productDetailsDiv h3 {
+    margin: 0;
+    font-size: 18px;
+    color: black;
+  }
+  
+  .productDetailsDiv p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+  }
+
+
+  .productDetailsDiv h3 title {
+    background-color: rebeccapurple;
+  }
+
+  .ProductActionsContainer{
+    /* background-color: rgb(8, 101, 183); */
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    gap: 10px;
+  }
+
+  .ActionButton{
+    border: none;
+    height: 40px;
+    border-radius: 8px;
+    padding: 5px 20px;
+    font-weight: 500;
+  }
+
+  .color1{
+    background-color: #efce26;
+  }
+  .color2{
+    background-color: #f52121;
+  }
+  .color3{
+    background-color: #23c3ad;
+  }
+

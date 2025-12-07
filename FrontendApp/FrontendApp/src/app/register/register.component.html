@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="container mt-5">
+    <div class="card shadow p-4 mx-auto" style="max-width: 400px;">
+      <h2 class="text-center mb-3">Register</h2>
+  
+      <input type="text" [(ngModel)]="Fullname" class="form-control mb-2" placeholder="Full Name" required />
+      <input type="text" [(ngModel)]="Address" class="form-control mb-2" placeholder="Address" required />
+      <input type="email" [(ngModel)]="email" class="form-control mb-2" placeholder="Email" required />
+      <input type="password" [(ngModel)]="password" class="form-control mb-3" placeholder="Password" required />
+      <input type="text" [(ngModel)]="Pincode" class="form-control mb-2" placeholder="Pincode" required/>
+      <input type="text" [(ngModel)]="PhoneNumber" class="form-control mb-2" placeholder="Mobile number" required/>
+      <button (click)="register()" class="btn btn-success w-100">Register</button>
+  
+      <p class="register-link">Already have an account? <a (click)="navigateToLogin()" class="text-primary fw-bold">Log in</a></p>
+    <a routerLink="/Home" id="skipForNow">Skip for Now</a>
+
+    </div>
+  </div>
+  

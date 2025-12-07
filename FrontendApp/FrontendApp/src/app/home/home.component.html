@@ -1,0 +1,58 @@
+<app-header></app-header>
+<div class="home-container">
+    <div class="AdContainer">
+        <div id="AdBanner">
+          <img id="adImage" src="" alt="Advertisement">
+        </div>
+    </div>
+    <div class="product_list">
+      <div class="category-card" *ngFor="let categ of category" (click)="viewProducts(categ.id)">
+        <div class="image_left">
+            <img [src]="'http://localhost:5156' + categ.imageUrl" alt="categ.name">
+        </div>
+        <div class="category_right">
+            <h3>{{ categ.name }}</h3>
+            <p>{{ categ.description }}</p>    
+        </div>   
+      </div>
+    </div>
+    
+<div id="MasterContainer">
+
+  <div class="product_container">
+    <!-- <h2>Product List</h2> -->
+    <div *ngFor="let product of AllProducts" class="product_card">
+      <!-- <img [src]="product.imageUrl" alt="{{ product.name }}" width="100"> -->
+      <!-- <a [routerLink]="['product/',product.id]" class="Productdetailslink"> </a>-->
+        <div class="image_container" [routerLink]="['product/',product.id]">
+            <!-- <img src="{{product.imageUrl}}" alt="{{product.name}}"> -->
+            <!-- <img src="productimage(headphone).png" alt="{{product.name}}"> -->
+            <img [src]="'http://localhost:5156' + product.imageUrl" alt="Product Image">
+
+
+            <!-- <img [src]="'/images/' + product.imageurl.replace('/images', '')" [alt]="product.name"> -->
+            <!-- <img [src]="getImageUrl(product)" [alt]="product.name"> -->
+            <div class="product-info-box">
+                  <div class="info-text">
+                        <h6 id="infoname">{{ product.name }}</h6>
+                        <p id="infoprice">Price: ₹{{ product.price }}</p>
+                        <p id="infobrand">Brand:₹{{ product.brand }}</p>
+                        <p id="infodescription"> <strong>Description:</strong> {{ product.description }}</p>
+                  </div>
+            </div>
+        </div>
+        
+        <div class="products_details_box" [routerLink]="['product/',product.id]">
+          <div class="product_details">
+            <h3 id="name">{{ product.name }}</h3>
+            <p id="brand">{{ product.brand }}</p>
+            <p id="price">₹{{ product.price }}</p>
+          </div>
+          <button class="AddTocartButton" (click)="addToCart(product.id)"> Add</button>
+        </div>
+    
+    </div>
+  </div>
+  
+</div>
+</div>

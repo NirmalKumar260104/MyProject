@@ -1,0 +1,96 @@
+<app-header></app-header>
+<span id="backbutton">
+    <img id="backimage" src="arrow-left-svgrepo-com.svg" [routerLink]="''" alt="back">
+</span>
+<div id="rootContainer" >
+    <div class="product_details_container">
+        <div id="image_container">
+            <!-- <img src="productimage(headphone).png" alt="product image"> -->
+            <img [src]="'http://localhost:5156' + product.imageUrl" alt="Product Image" width="100">
+
+        </div>
+        <div class="product_detail_sec_container">
+         <div class="product_details">
+           <h2> {{product.name}} </h2>
+           <p id="priced"><strong>₹{{product.price}}</strong></p>
+           <p id="brandd">{{product.brand}}</p>
+           <p id="descriptiond">{{product.description}}</p>
+           <span class="stockleft" *ngIf="(product.stock < 10)">
+            Stocks left : {{product.stock}}
+           </span>
+           <button class="AddTocartButton2" (click)="addToCart(product.id)"> Add to cart</button>
+         </div>
+     </div>
+    </div>
+
+    <div id="MasterContainer">
+
+        <div class="product_container">
+          <!-- <h2>Product List</h2> -->
+          <div *ngFor="let rec_product of recommendedProducts" class="product_card">
+            <!-- <img [src]="product.imageUrl" alt="{{ product.name }}" width="100"> -->
+            <!-- <a [routerLink]="['product/',product.id]" class="Productdetailslink"> </a>-->
+              <div class="image_container">
+                  <!-- <img src="{{product.imageUrl}}" alt="{{product.name}}"> -->
+                  <!-- <img src="productimage(headphone).png" alt="{{product.name}}"> -->
+                  <img [src]="'http://localhost:5156' + rec_product.imageUrl" alt="Product Image">
+      
+      
+                  <!-- <img [src]="'/images/' + product.imageurl.replace('/images', '')" [alt]="product.name"> -->
+                  <!-- <img [src]="getImageUrl(product)" [alt]="product.name"> -->
+                  <div class="product-info-box">
+                        <div class="info-text">
+                              <h6 id="infoname">{{ rec_product.name }}</h6>
+                              <p id="infoprice">Price: ₹{{ rec_product.price }}</p>
+                              <p id="infobrand">Brand:₹{{ rec_product.brand }}</p>
+                              <p id="infodescription"> <strong>Description:</strong> {{ rec_product.description }}</p>
+                        </div>
+                  </div>
+              </div>
+              
+              <div class="products_details_box" (click)="goToProduct(rec_product.id)">
+                <div class="product_details">
+                  <h3 id="name">{{ rec_product.name }}</h3>
+                  <p id="brand">{{ rec_product.brand }}</p>
+                  <p id="price">₹{{ rec_product.price }}</p>
+                </div>
+                <button class="AddTocartButton" (click)="addToCart(rec_product.id)"> Add</button>
+              </div>
+          
+          </div>
+        </div>
+        
+      </div>
+      </div>
+    <!-- <div id="recommendedProductsContainer">
+        <div class="recommendedProductCard" *ngFor="let rp of recommendedProducts">
+            <div class="imagecontainer" [routerLink]="'product/' + rp.id">
+                <img [src]="'http://localhost:5156' + rp.imageUrl" alt="Product Image">
+            </div>
+            <div class="detailsContainer">
+                <div class="detailscard" [routerLink]="'product/' + rp.id">
+                    <h3 id="name">{{ rp.name }}</h3>
+                    <p id="price">₹{{ rp.price }}</p>
+                    <p id="brand">{{ rp.brand }}</p>
+                </div>
+                <button class="AddTocartButton" (click)="addToCart(rp.id)"> Add</button>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- <div class="recommendedContainer">
+        <div class="recommendedProducts" *ngFor="let rp of recommendedProducts">
+            <div class="R_products_details_box" >
+                <div class="imagecontainer" [routerLink]="'product/' + rp.id">
+                    <img [src]="'http://localhost:5156' + rp.imageUrl" alt="Product Image">
+                </div>
+                <div class="R_product_details" [routerLink]="'product/' + rp.id">
+                  <h3>{{ rp.name }}</h3>
+                  <p>₹{{ rp.price }}</p>
+                </div>
+                <button class="AddTocartButton" (click)="addToCart(rp.id)"> Add</button>
+              </div>
+        </div>
+    </div> -->
+<!-- </div> -->

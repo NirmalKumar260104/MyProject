@@ -1,0 +1,27 @@
+<app-header></app-header>
+<span id="backbutton">
+    <img id="backimage" src="arrow-left-svgrepo-com.svg" [routerLink]="['']" alt="back">
+</span>
+ <div class="RegisterContainer">
+    <div class="RegisterBox">
+          <h2 class="registerheading">Register</h2>
+          <div class="inputContainer">
+                <div class="LeftInputContainer">
+                    <input type="email" [(ngModel)]="email" placeholder="Email" required />
+                    <input type="text" [(ngModel)]="Fullname" placeholder="Full Name" required />
+                    <input type="password" [(ngModel)]="password" placeholder="Password" required />
+                </div>
+                <div class="RightInputContainer">
+                    <input type="text" [(ngModel)]="PhoneNumber" placeholder="Mobile number" required/>
+                    <input type="text" [(ngModel)]="Pincode" placeholder="Pincode" required/>
+                    <input type="text" [(ngModel)]="Address" placeholder="Address" required />
+                </div>
+          </div>
+          <div class="ButtonContainer">
+            <button (click)="register()" class="RegisterButton">Register</button>
+          </div>
+          <p class="AlreadyHave">Already have an account? <a (click)="navigateToLogin()" class="LoginLink">Log in</a></p>
+    </div>
+ </div>
+
+  

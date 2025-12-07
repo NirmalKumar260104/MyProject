@@ -1,0 +1,157 @@
+.OrderPageContainer {
+    margin-top:90px;
+    margin-bottom:0px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 80vh;
+    background-color: #fff;
+}
+ 
+.OrderPageSecondaryContainer {
+    width: 95%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgb(197, 197, 197);
+    border-radius: 20px;
+    padding: 20px;
+}
+ 
+.OrderTitle, .BillDetailsTitle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+ 
+table.ProductsFinalList {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+ 
+thead {
+    background-color: #000000;
+    color: white;
+}
+ 
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+ 
+th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+ 
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+ 
+tfoot td {
+    font-weight: bold;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: right;
+}
+ 
+tfoot td:last-child {
+    text-align: center;
+}
+ 
+/* Input Fields */
+.AddressContainer, .PaymentSelectContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 25px; */
+    width: 100%;
+}
+ 
+.AddressSpan, .PincodeSpan {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* width: 48%; */
+}
+ 
+input {
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    font-size: large;
+    border: 1px solid grey;
+    background-color: #fdfdfd;
+    width: 60%;
+}
+ 
+input:focus {
+    border-color: #252525;
+    background-color: #ffffff;
+}
+ 
+label {
+    font-size: 18px;
+    font-weight: 500;
+}
+ 
+/* Payment Select */
+.PaymentSelectContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+select {
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 50%;
+    background-color: #f8f9fa;
+}
+ 
+select:focus {
+    border-color: #171717;
+    outline: none;
+}
+ 
+/* Bottom Section */
+.BottomConfirmContainer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(40, 40, 40);
+}
+ 
+button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+ 
+.ConfirmButton {
+    background-color: rgb(2, 190, 96);
+}
+ 
+.CancelButton {
+    background-color: rgb(201, 13, 0);
+}
+ 
+.TotalAmountFooter {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+}

@@ -1,0 +1,14 @@
+<!-- <app-header></app-header> -->
+ <div class="LoginContainer">
+  <div class="login-page">
+    <h2>Login</h2>
+    <input type="email" [(ngModel)]="email" placeholder="Enter email" required />
+    <input type="password" [(ngModel)]="password" placeholder="Enter password" required />
+    <button (click)="login()">Login</button>
+    <p class="register-link">New here? <a (click)="navigateToRegister()" class="text-primary fw-bold">Register Now</a></p>
+    <a routerLink="/Home" id="skipForNow">Skip for Now</a>
+
+  </div>
+ </div>
+
+  

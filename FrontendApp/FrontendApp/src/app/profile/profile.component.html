@@ -1,0 +1,39 @@
+<app-header></app-header>
+
+<div class="container mt-4">
+  <div class="card p-4 shadow-lg rounded">
+    <h2 class="text-center text-primary">👤 Profile Details</h2>
+
+    <ng-container *ngIf="userInfo; else noUser">
+      <p><strong>Name:</strong> {{ userInfo.name }}</p>
+      <p><strong>Email:</strong> {{ userInfo.email }}</p>
+      <p><strong>Address:</strong> {{ userInfo.address }}</p>
+      <p><strong>Pincode:</strong> {{ userInfo.pincode }}</p>
+      <p><strong>Mobile Number:</strong> {{ userInfo.mobile }}</p>
+      <hr/>
+      <h4 class="text-success text-center"> Order History</h4>
+      <div *ngIf="orders.length > 0; else noOrders">
+        <div *ngFor="let order of orders" class="mb-4 p-3 border rounded">
+          <p><strong>Order Date:</strong> {{ order.orderDate | date:'medium' }}</p>
+          <p><strong>Payment Method:</strong> {{ order.paymentMethod }}</p>
+          <p><strong>Status:</strong> {{ order.status }}</p>
+          <p><strong>Delivery Address:</strong> {{ order.address }}</p>
+          <h6> Order Items:</h6>
+          <ul>
+            <li *ngFor="let item of order.orderItems">
+              {{item.productName}} {{ item.quantity }}  {{ item.price }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-template #noUser>
+      <p class="text-danger">User details not available.</p>
+    </ng-template>
+
+    <ng-template #noOrders>
+      <p class="text-danger">No orders found.</p>
+    </ng-template>
+  </div>
+</div>
